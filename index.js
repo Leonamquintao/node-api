@@ -9,7 +9,7 @@ var app = express();
 
 //this statement will search inside de 'client' folder
 //and look for any file with the name of index.html
-//app.use(express.static('client'));
+app.use(express.static('client'));
 
 //app.use((request, response, next) => {
 //  console.log('first middleware');
