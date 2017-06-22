@@ -6,36 +6,36 @@ Created for studies, but feel free to use ...
 ### Blueprint
 
 ```{
-  'GET /users': {
-    'desc': 'return all users',
+  'GET /gorillas': {
+    'desc': 'return all gorillas',
     'response': '200 application/json',
     'data': []
   }
 },
 {
-  'GET /users/:id': {
-    'desc': 'return one user based on his id',
+  'GET /gorillas/:id': {
+    'desc': 'return one gorilla based on his id',
     'response': '200 application/json',
     'data': {}
   }
 },
 {
-  'POST /users': {
-    'desc': 'create and returns a new user',
+  'POST /gorillas': {
+    'desc': 'create and returns a new gorilla',
     'response': '201 application/json',
     'data': {}
   }
 },
 {
-  'PUT /users/:id': {
-    'desc': 'update and returns the user based on his id',
+  'PUT /gorillas/:id': {
+    'desc': 'update and returns the gorilla based on his id',
     'response': '201 application/json',
     'data': {}
   }
 },
 {
-  'DELETE /users/:id': {
-    'desc': 'delete and returns the user based on his id',
+  'DELETE /gorillas/:id': {
+    'desc': 'delete and returns the gorilla based on his id',
     'response': '200 application/json',
     'data': {}
   }

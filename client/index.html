@@ -2,20 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Home Page</title>
-
+    <title>Gorilla Register</title>
     <link rel="stylesheet" href="/css/master.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
   </head>
   <body>
     <div class="container">
       <div class="content">
-        <h1 class="form-title">User registration form</h1>
+
+        <div class="image">
+          <img class="img-logo" src="images/gorilla-gif.gif" alt="">
+        </div>
+
+        <h1 class="form-title">Register a new Gorilla</h1>
+
         <form class="" action="index.html" method="post">
-          <input class="form-control" type="text" name="name" value="" placeholder="enter the name..."><br /><br />
+
+          <label for="name">Name:</label>
+          <input class="form-control" type="text" name="name" value="" placeholder="enter the gorilla`s name..."><br /><br />
+
+          <label for="age">Age:</label>
           <input class="form-control" type="number" name="age" value="01"><br /><br />
-          <input class="form-control" type="text" name="role" value="" placeholder="enter the role..."><br /><br />
+
+          <label for="name">Clan:</label>
+          <input class="form-control" type="text" name="clan" value="" placeholder="enter the clan..."><br /><br />
+
           <input class="btn btn-primary" type="submit" value="save">
         </form>
+
       </div>
     </div>
 

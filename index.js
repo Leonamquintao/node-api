@@ -23,42 +23,42 @@ app.use(express.static('client'));
 //do some stuff if is auth...
 //})
 
-var users = [{ name: 'root user', age: 00, role: 'Admin user' }];
+var gorillas = [{ name: 'General Thade', age: 08, clan: 'tribal warriors' }];
 var id = 0;
 
 
 // function that will be used always when a endpoint
-// have the 'id' param : '/users/:id'
+// have the 'id' param : '/gorillas/:id'
 app.param('id', (request, response, next, id) => {
-  let user = users.find(users, { id: id });
+  let gorilla = gorillas.find(gorillas, { id: id });
 
-  if(!user) {
+  if(!gorilla) {
     request.send();
   }
 
-  request.user = user;
+  request.gorilla = gorilla;
   next();
 
 })
 
 app.get('/', (request, response) => {
-  let json_data = { name: 'Leonam Rodrigo', age: 33, role: 'Developer' };
+  let json_data = { name: 'Leonam Rodrigo', age: 33, clan: 'Developer' };
   response.json(json_data);
 });
 
-app.post('/users', (request, response) => {
-  let new_user = request.body;
+app.post('/gorillas', (request, response) => {
+  let new_gorilla = request.body;
   id++;
-  new_user.id = id + '';
-  users.push(new_user);
+  new_gorilla.id = id + '';
+  gorillas.push(new_gorilla);
 })
 
-app.get('/users/:id', function(request, response) {
-  //var user = users.find(users, { id: request.params.id });
-  response.json(user || {});
+app.get('/gorillas/:id', function(request, response) {
+  //var gorilla = gorillas.find(gorillas, { id: request.params.id });
+  response.json(gorilla || {});
 
 });
 
 app.listen(port, () => {
-  console.log(' ---------- server running in port: '+port+ ' ----------');
+  console.log(' ---------- gorilla server running in port: '+port+ ' ----------');
 });
