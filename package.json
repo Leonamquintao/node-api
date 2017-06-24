@@ -4,6 +4,7 @@
   "description": "rest api example",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3"
   },
   "devDependencies": {},

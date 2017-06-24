@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Gorilla Register</title>
-    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
   </head>
   <body>
@@ -16,13 +16,20 @@
 
         <h1 class="form-title">Register a new Gorilla</h1>
 
-        <form class="" action="index.html" method="post">
+        <form action="/gorillas" method="post">
 
           <label for="name">Name:</label>
           <input class="form-control" type="text" name="name" value="" placeholder="enter the gorilla`s name..."><br /><br />
 
           <label for="age">Age:</label>
           <input class="form-control" type="number" name="age" value="01"><br /><br />
+
+          <label for="age">Gender:</label>
+          <select class="form-control selct">
+            <option value="select" selected>Select</option>
+            <option value="f">Female</option>
+            <option value="m">Male</option>
+          </select><br /><br />
 
           <label for="name">Clan:</label>
           <input class="form-control" type="text" name="clan" value="" placeholder="enter the clan..."><br /><br />
@@ -32,6 +39,12 @@
 
       </div>
     </div>
-
+    <script>
+      function submitAction() {
+        event.preventDefault();
+        var form = document.getElementsByTagName("form");
+        form.reset();
+      }
+    </script>
   </body>
 </html>
