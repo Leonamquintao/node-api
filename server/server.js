@@ -1,6 +1,5 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var port = process.env.PORT || 3000;
 var app = express();
 
 /**
@@ -69,8 +68,6 @@ app.use((request, response, error, next) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(' ---------- Gorilla`s server running in port: '+port+ ' ----------');
-});
-
-//module.exports = app;
+//export the app will be necessary to submit
+//it to a test framwork.
+module.exports = app;
