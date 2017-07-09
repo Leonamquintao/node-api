@@ -54,8 +54,12 @@ app.get('/gorillas/:id', (request, response) => {
   response.json(gorilla || {});
 });
 
-app.put('gorillas/:id', (request, response) => {
+app.put('/gorillas/:id', (request, response) => {
 
+});
+
+app.delete('/gorillas/:id', (request, response) => {
+  
 });
 
 /*-------------------------- End Routes Area ---------------------------------------*/

@@ -11,7 +11,7 @@
     "mocha": "^3.4.2"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha server/spec.js"
   },
   "author": "leonamquintao@gmail.com",
   "license": "ISC"
