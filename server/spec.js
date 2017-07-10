@@ -31,6 +31,27 @@ describe('[GORILAS]', () => {
     });
   });
 
+  it('should update a gorila', (done) => {
+    request(app).post('/gorillas').send({
+      id: 1,
+      name: 'test gorilla',
+      age: 10,
+      gender: 'male',
+      clan: 'any'
+    })
+    .set('Accept', 'application/json')
+    .end((error, resp) => {
+      let gorila = resp.body;
+      request(app).put('/gorillas/' + gorila.id).send({
+        name: 'new name'
+      })
+      .end((error, resp) => {
+        expect(resp.body.name).to.equal('new name');
+        done();
+      });
+    });
+  });
+
   it('should delete a gorilla', (done) => {
     request(app).post('/gorillas').send({
       id: 1,
@@ -47,7 +68,7 @@ describe('[GORILAS]', () => {
         expect(resp.body).to.eql(delete_gorila);
         done();
       });
-    })
+    });
   });
 
 });
