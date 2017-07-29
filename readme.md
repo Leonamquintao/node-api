@@ -5,7 +5,8 @@ Created for studies, but feel free to use ...
 
 ### Blueprint
 
-```{
+```.
+{
   'GET /gorillas': {
     'desc': 'return all gorillas',
     'response': '200 application/json',
